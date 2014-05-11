@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Seven Informatica e Eletronicos | Página Inicial</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../_css/estilo.css">
+    <script src="../javascript/jquery-1.6.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h3').click(function(){
+                $(this).parent().find('ul.submenu').slideToggle("slow");
+                if($(this).hasClass("fechado")){
+                    $(this).toggleClass("ativo");
+                    $(this).toggleClass("aberto");
+                }
+            });
+        });
+        $(document).ready(function(){
+            $('nav#menuprodutos nav ul li a').click(function(){
+                $(this).parent().find('ul.subsubmenu').slideToggle("slow");
+                if($(this).hasClass("fechado")){
+                    $(this).toggleClass("ativo");
+                    $(this).toggleClass("aberto");
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="conteudo">
+        <!-- Cabeçalho -->
+       <header>
+        <a href="../index.html"><img src="../_imagens/Seven_Informatica_Logo.png" alt="Seven Informática Logo" title="Seven Informática e Eletronicos" class="sevenLogo"></a>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li  class="ativo"><a href="index.html">Produtos</a></li>
+                <li><a href="#">Como Comprar</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+            </ul>
+        </nav>
+
+       </header>
+        <!-- Conteúdo -->
+       <article>
+
+           <!-- Título -->
+           <img  id="titulo" src="_imagens_produtos/computador.png" title="Produtos" alt="Produtos">
+            <h1>Produtos</h1>
+
+           <!-- Separador -->
+           <hr>
+
+           <!-- BreadCrumb -->
+           <div id="breadcrumb">
+               <!-- Página Inicial -->
+                <a href="../index.html" title="Página Inicial">Inicio</a>
+
+               <span class="separador"></span>
+
+               <!-- Produtos -->
+               <a title="Produtos">Produtos</a>
+           </div>
+
+           <!-- Comteúdo Principal -->
+           <section id="principal">
+           <!-- Menu Produtos -->
+            <nav id="menuprodutos">
+                <!-- Gamer -->
+
+                <nav>
+                <h3  title="Gamer" style="border-radius: 4px 4px 0 0;" class="fechado">Gamer</h3>
+                    <ul class="submenu">
+                        <!-- Console -->
+                        <li><a title="Console" class="fechado">Console</a>
+                            <ul class="subsubmenu">
+                                <li><a title="Ps2">Ps2</a></li>
+                                <li><a title="Ps3">Ps3</a></li>
+                                <li><a title="ps4">Ps4</a></li>
+                                <li><a title="PSP">PSP</a></li>
+                                <li><a title="Xbox 360">Xbox 360</a></li>
+                            </ul>
+                        </li>
+                        <!-- Jogos -->
+                        <li><a title="Jogos" class="fechado">Jogos</a>
+                            <ul class="subsubmenu">
+                                <li><a title="Xbox 360">Xbox 360</a></li>
+                                <li><a title="Ps2">Ps2</a></li>
+                                <li><a title="Ps3">Ps3</a></li>
+                                <li><a title="Psp">Psp</a></li>
+                            </ul>
+                        </li>
+                        <!-- Acessórios -->
+                        <li><a title="Acessórios" class="fechado">Acessórios</a>
+                            <ul class="subsubmenu">
+                                <li><a title="Joysticks">Joysticks</a></li>
+                                <li><a title="Xbox 360">Xbox 360</a></li>
+                                <li><a title="Ps2">Ps2</a></li>
+                                <li><a title="Ps3">Ps3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Computadores -->
+
+                <nav>
+                <h3 title="Computadores" class="fechado">Computadores</h3>
+                    <ul class="submenu">
+
+                        <!-- Periféricos -->
+                        <li><a title="Periféricos" class="fechado">Periféricos</a>
+                            <ul class="subsubmenu">
+                                <li><a href="#" title="Mouse">Mouse</a></li>
+                                <li><a href="#" title="Teclado">Teclado</a></li>
+                                <li><a href="#" title="Web Can">Web Can</a></li>
+                                <li><a href="#" title="Caixa de som">Caixa de som</a></li>
+                                <li><a href="#" title="Fones">Fones</a></li>
+                                <li><a href="#" title="Gravadoe CD/DVD">Gravadoe CD/DVD</a></li>
+                                <li><a href="#" title="Placa de Som">Placa de Som</a></li>
+                                <li><a href="#" title="Disco Rígido (HD)">Disco Rígido (HD)</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Desktop -->
+                        <li><a title="Desktop">Desktop</a></li>
+
+                        <!-- Portáteis -->
+                        <li><a title="Portáteis"  class="fechado">Portáteis</a>
+                            <ul class="subsubmenu">
+                                <li><a href="#" title="Netbook">Netbook</a></li>
+                                <li><a href="#" title="Notebook">Notebook</a></li>
+                                <li><a href="#" title="Tablet">Tablet</a></li>
+                                <li><a href="#" title="Acessórios">Acessórios</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Monitores-->
+                        <li><a title="Monitores"  class="fechado">Monitores</a>
+                            <ul class="subsubmenu">
+                                <li><a href="#" title="LED">LED</a></li>
+                                <li><a href="#" title="LCD">LCD</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Conectividade -->
+                        <li><a class="fechado" title="Conectividade">Conectividade</a>
+                            <ul  class="subsubmenu">
+                                <li><a href="#" title="Modem 3G">Modem 3G</a></li>
+                                <li><a href="#" title="Roteador">Roteador</a></li>
+                                <li><a href="#" title="Switch">Switch</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Multimidia -->
+                <nav>
+                <h3 title="Multimidia" class="fechado">Multimídia</h3>
+                    <ul class="submenu">
+                        <ul class="submenu">
+                            <li><a href="#" title="HeadPhone">HeadPhone</a></li>
+                            <li><a href="#" title="Headset">Headset</a></li>
+                            <li><a href="#" title="CD/DVD Virgem">CD/DVD Virgem</a></li>
+                            <li><a href="#" title="web Cam">web Cam</a></li>
+                            <li><a href="#" title="Caixa de Som">Caixa de Som</a></li>
+                        </ul>
+                        <li><a  class="fechado" title="Portátil">Portátil</a>
+                            <ul  class="subsubmenu">
+                                <li><a href="#" title="Caixa de som">Caixa de som</a></li>
+                                <li><a href="#" title="Fone">Fone</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Armazenamento -->
+                <nav>
+                <h3 title="Armazenamento" class="fechado">Armazenamento</h3>
+                        <ul  class="submenu">
+                            <li><a href="#" title="Pendrive">Pendrive</a></li>
+                            <li><a href="#" title="Cartão de Memória">Cartão de Memória</a></li>
+                            <li><a href="#" title="Disco Rígido">Disco Rígido</a></li>
+                            <li><a href="#" title="CD/DVD Virgem">CD/DVD Virgem</a></li>
+                            <li><a href="#" title="Memória">Memória</a></li>
+                        </ul>
+                </nav>
+
+                <!-- Celulares -->
+                <nav>
+                <h3 title="Celular / Tablet" class="fechado">Celular / Tablet</h3>
+                        <ul class="submenu">
+                            <li><a href="#" title="Celular/SmartFone">Celular/SmartFone</a></li>
+                            <li><a href="#" title="Tablet">Tablet</a></li>
+                            <li><a href="#" title="Capa">Capa</a></li>
+                            <li><a href="#" title="Fone">Fone</a></li>
+                            <li><a href="#" title="Pelicula">Pelicula</a></li>
+                        </ul>
+                </nav>
+            </nav>
+
+                <div class="boxProdutos"></div>
+                <div class="boxProdutos"></div>
+                <div class="boxProdutos"></div>
+            </section>
+
+
+       </article>
+        <!-- Rodapé -->
+        <footer>
+            <!-- Linha de Produtos -->
+            <div class="footerbox">
+                <img src="../_imagens/computador.png" alt="Conheça nossa linha de Produtos" title="Conheça nossa linha de Produtos">
+                <p>A Seven Informatica e Eletronicos conta com uma linha completa de produtos de tecnologia.
+                    Desktops, Notebooks, Netbooks, Processadores, Acessórios, Games e muito mais!</p>
+                <a href="index.html" title="Conheça nossa linha de Produtos">Conheça nossa linha de Produtos</a>
+            </div>
+
+            <!-- Localização -->
+            <div class="footerbox">
+                <img src="../_imagens/mapa.png" alt="Encontre no Mapa nossa Localização" title="Encontre no Mapa nossa Localização">
+                <p>Você encontra a Seven Informatica e Eletronicos em Conselheiro  Paulino Nova Friburgo - RJ.
+                    Contamos com uma loja preparada e com as melhores ofertas para você.</p>
+                <a href="#" title="Encontre no mapa a nossa localização">Encontre no mapa a nossa localização</a>
+            </div>
+
+            <!-- Fale Conosco -->
+            <div class="footerbox">
+                <img src="../_imagens/email.png" alt="Fale Conosco" title="Fale Conosco" style="margin-top: 22px;">
+                <p>Queremos ouvir a sua opinião, críticas e sugestões.
+                    Só assim poderemos melhorar cada vez mais nosso atendimento e nossa linha de produtos.</p>
+                <a href="#" title="Fale Conosco">Fale Conosco</a>
+
+            </div>
+
+            <!-- Copyrigth -->
+            <p id="cp">© 2014 Seven Informatica e Eletronicos. Todos os direitos reservados</p>
+
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seven Informatica e Eletronicos | Slide</title>
+    <meta charset="UTF-8"/>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            var liWidth = $("#galeria ul li").outerWidth(),
+                speed   = 3500,
+                rotate  = setInterval(auto , speed);
+
+
+
+            //mostra os botões
+            $("section#galeria").hover(function(){
+                $("section#buttons").fadeIn();
+                        clearInterval(rotate);
+            },
+            function(){
+                $("section#buttons").fadeOut();
+                rotate = setInterval(auto,speed);
+            });
+            //proximo
+            $(".next").click(function(e){
+                e.preventDefault();
+
+                $("section#galeria ul").css({'width':'99999%'}).animate({left:-liWidth}, function(){
+                    $("#galeria ul li").last().after($("#galeria ul li").first());
+                    $(this).css({'left':'0','width': 'auto'});
+                });
+            });
+            //voltar
+            $(".prev").click(function(e){
+                e.preventDefault();
+
+
+                $("#galeria ul li").first().before($("#galeria ul li").last().css({'margin-left':-liWidth}));
+                $("section#galeria ul").css({'width':'99999%'}).animate({left:liWidth}, function(){
+                    $("#galeria ul li").first().css({'margin-left':'0'});
+                    $(this).css({'left':'0','width':'auto'});
+                });
+
+            });
+
+            function auto(){
+                $(".next").click();
+            }
+        });
+    </script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    section#galeria{
+        background: transparent;
+        width: 730px;
+        height: 280px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+    section#galeria section#buttons{
+        display: none;
+        position: absolute;
+        margin: 5px;
+        z-index: 500;
+    }
+    section#galeria section#buttons a{
+        background: #333;
+        width: 50px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+        font: bold 23pt arial;
+        line-height: 35px;
+        text-decoration: none;
+        margin-right: 2px;
+        color: #fff;
+        opacity: 0.7;
+    }
+    section#galeria section#buttons a:hover{
+        background: #555;
+    }
+    section#galeria ul{
+        list-style: none;
+        display: table;
+        position: relative;
+    }
+    section#galeria ul li{
+        width: 730px;
+        height: 280px;
+        display: inline-block;
+    }
+    section#galeria ul li img{
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <section id="galeria">
+        <section id="buttons">
+            <a href="#" class="prev">&laquo;</a>
+            <a href="#" class="next">&raquo;</a>
+        </section>
+
+        <ul>
+            <li>
+                <img src="img/01.png"/>
+            </li>
+            <li>
+                <img src="img/02.png"/>
+            </li>
+            <li>
+                <img src="img/03.png"/>
+            </li>
+            <li>
+                <img src="img/04.png"/>
+            </li>
+            <li>
+                <img src="img/05.png"/>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
